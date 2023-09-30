@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     /**background-color: #111215; **/
-   background-image: url("../../assets/img/background-mountain.png");
+   background-image: url("../../assets/img/background-weather-main.png");
    background-position: center;
    background-size: cover;   
    background-repeat: no-repeat;

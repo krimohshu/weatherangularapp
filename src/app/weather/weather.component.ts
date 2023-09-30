@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-weather',
@@ -18,7 +23,7 @@ export class WeatherComponent implements OnInit {
   iconURL: string = '';
   city: string = 'london';
   units: string = 'metric';
-  cityName: string = 'London';
+  cityName: string = 'london';
   windDegre: number = 0;
   speedWind: number = 0;
 
@@ -42,13 +47,18 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeather(cityName, this.units)
     .subscribe({
       next: (res) => {
-        // console.log(res);
+        console.log(res);
+        if(res != null){
         this.myWeather = res;
         console.log(this.myWeather);
+        }
       },
-      error: (error) => console.log(error.message),
+       error: (error) => {
+        console.log(error.message);
+        this.myWeather = null;
+       },
+       
       complete: () => console.info('API call completed')
-    })
+      } );
   }
-
 }

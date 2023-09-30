@@ -4,7 +4,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { FormsModule } from '@angular/forms';
-import { ErrorCatchingInterceptor } from './interceptors/error-catching.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,11 +15,7 @@ import { ErrorCatchingInterceptor } from './interceptors/error-catching.intercep
     HttpClientModule,
     FormsModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: ErrorCatchingInterceptor,
-    multi: true
- }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
