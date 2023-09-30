@@ -20,7 +20,13 @@ The Angular APP is running on http://localhost:4200/
 
 ![img.png](img.png)
 
+## User Input and Output
+###  Valid Search result of Norwich city 
+![img_1.png](img_1.png)
+<br>
+###  Invalid Search result of THISISINVALIDCITY location
+![img_2.png](img_2.png)
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the ngular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
