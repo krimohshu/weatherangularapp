@@ -13,14 +13,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Information about Application
 This programme gives weather data based on location search criteria. When a user searches for a valid location on the main page, the programme displays weather information.
-This weather data is provided by a Spring Boot api that accesses a third-party weather API internally. The third-party API can be found at api.weatherapi.com.
+<br>This weather data is provided by a Spring Boot api that accesses a third-party weather API internally. The third-party API can be found at api.weatherapi.com.
 
 The Angular APP is running on http://localhost:4200/
-The Springboot is running on http://localhost:8181/
+<br>The Springboot is running on http://localhost:8181/
 
 ![img.png](img.png)
 
-from 3rd party weather API,
 
 ## Further help
 
