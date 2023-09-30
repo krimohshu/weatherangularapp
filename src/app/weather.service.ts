@@ -9,7 +9,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(city: string, units: string)  {
+  getWeather(city: string)  {
     return this.http.get('http://localhost:8181/getweatherinfo?location='+ city );
   }
 }

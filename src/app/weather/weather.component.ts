@@ -13,16 +13,7 @@ import { Form } from '@angular/forms';
 })
 export class WeatherComponent implements OnInit {
   myWeather: any;
-  temperature: number = 0;
-  maxTemp: number = 0;
-  minTemp: number = 0;
-  feelsLikeTemp: number = 0;
-  humidity: number = 0;
-  pressure: number = 0;
-  summary: string = '';
-  iconURL: string = '';
   city: string = 'london';
-  units: string = 'metric';
   cityName: string = 'london';
   windDegre: number = 0;
   speedWind: number = 0;
@@ -44,7 +35,7 @@ export class WeatherComponent implements OnInit {
   }
 
   private getWeatherData(cityName: string) {
-    this.weatherService.getWeather(cityName, this.units)
+    this.weatherService.getWeather(cityName)
     .subscribe({
       next: (res) => {
         console.log(res);
